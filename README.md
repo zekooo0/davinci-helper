@@ -8,6 +8,7 @@ This tool is designed specifically for Linux users running the **free version of
 
 ## Features
 
+- 📦 **Pre-compiled Binary**: Download the standalone executable (`ResolveTranscoder`) directly from GitHub Releases without needing Python or Tkinter installed.
 - 📂 **Batch Folder Processing**: Select a folder and let the tool automatically scan and process all compatible videos.
 - ⚡ **Non-blocking Multi-threading**: The user interface remains responsive and smooth during transcoding.
 - 🖥️ **Integrated Log Terminal**: View real-time transcoding progress and success/failure status within the application.
@@ -18,10 +19,24 @@ This tool is designed specifically for Linux users running the **free version of
 
 ## Prerequisites
 
-Before running the application, ensure you have the following dependencies installed on your system:
+### 1. FFmpeg (Required)
+Regardless of how you run the app, make sure `ffmpeg` is installed and available in your system's PATH.
 
-### 1. Python 3 & Tkinter
-Ensure Python 3 is installed. You will also need the Python Tkinter package:
+* **Debian/Ubuntu/Pop!_OS**:
+  ```bash
+  sudo apt install ffmpeg
+  ```
+* **Fedora**:
+  ```bash
+  sudo dnf install ffmpeg
+  ```
+* **Arch Linux**:
+  ```bash
+  sudo pacman -S ffmpeg
+  ```
+
+### 2. Python 3 & Tkinter (Only if running from source)
+If you run the application directly from the source code, you will need Python 3 and Tkinter:
 
 * **Debian/Ubuntu/Pop!_OS**:
   ```bash
@@ -37,26 +52,25 @@ Ensure Python 3 is installed. You will also need the Python Tkinter package:
   sudo pacman -S python tk
   ```
 
-### 2. FFmpeg
-Make sure `ffmpeg` is installed and available in your system's PATH.
-
-* **Debian/Ubuntu/Pop!_OS**:
-  ```bash
-  sudo apt install ffmpeg
-  ```
-* **Fedora**:
-  ```bash
-  sudo dnf install ffmpeg
-  ```
-* **Arch Linux**:
-  ```bash
-  sudo pacman -S ffmpeg
-  ```
-
 ---
 
-## How to Run
+## Installation & Running
 
+You can run the application either using the pre-compiled standalone executable or directly from source.
+
+### Option A: Using the Standalone Executable (Recommended)
+1. Go to the **GitHub Releases** page of your repository.
+2. Download the `ResolveTranscoder` executable.
+3. Make the file executable via terminal:
+   ```bash
+   chmod +x ResolveTranscoder
+   ```
+4. Run it:
+   ```bash
+   ./ResolveTranscoder
+   ```
+
+### Option B: Running from Source
 1. Clone or download this repository.
 2. Open a terminal in the folder containing `app.py`.
 3. Run the application:
